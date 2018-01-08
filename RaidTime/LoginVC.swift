@@ -29,8 +29,9 @@ class LoginVC: UIViewController {
     }
 
     @IBAction func authorize(_ sender: Any) {
+        
         let callbackURL = "RaidTime://"
-        let authURL = URL(string:"https://www.bungie.net/en/OAuth/Authorize")
+        let authURL = URL(string:"https://www.bungie.net/en/OAuth/Authorize/ClientID=\(clientID)&response_type=code")
         
         
         self.authSession = SFAuthenticationSession(url: authURL!, callbackURLScheme: callbackURL, completionHandler: { (callBack:URL?, error: Error?) in
@@ -39,7 +40,9 @@ class LoginVC: UIViewController {
                 
                 return
             }
+            
             let token = self.getQueryStringParameter(url: (successURL.absoluteString), param: "token")
+            
             
         })
         self.authSession?.start()

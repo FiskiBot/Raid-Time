@@ -15,6 +15,10 @@
 		C1306B101FFC6EE900EBC52E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1306B0E1FFC6EE900EBC52E /* LaunchScreen.storyboard */; };
 		C1306B1B1FFC6EE900EBC52E /* RaidTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1306B1A1FFC6EE900EBC52E /* RaidTimeTests.swift */; };
 		C1306B261FFC6EE900EBC52E /* RaidTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1306B251FFC6EE900EBC52E /* RaidTimeUITests.swift */; };
+		C1306B342003E8FF00EBC52E /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1306B332003E8FF00EBC52E /* WebViewVC.swift */; };
+		C1D6835E20041F5400C092D7 /* RaidTimeSetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6835D20041F5400C092D7 /* RaidTimeSetVC.swift */; };
+		C1D6836020042EFD00C092D7 /* RaidListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6835F20042EFD00C092D7 /* RaidListVC.swift */; };
+		C1D6836220042F6800C092D7 /* RaidListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6836120042F6800C092D7 /* RaidListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		C1306B211FFC6EE900EBC52E /* RaidTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaidTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1306B251FFC6EE900EBC52E /* RaidTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaidTimeUITests.swift; sourceTree = "<group>"; };
 		C1306B271FFC6EE900EBC52E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1306B332003E8FF00EBC52E /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
+		C1D6835D20041F5400C092D7 /* RaidTimeSetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaidTimeSetVC.swift; sourceTree = "<group>"; };
+		C1D6835F20042EFD00C092D7 /* RaidListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaidListVC.swift; sourceTree = "<group>"; };
+		C1D6836120042F6800C092D7 /* RaidListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaidListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,10 @@
 			children = (
 				C1306B021FFC6EE900EBC52E /* AppDelegate.swift */,
 				C1306B041FFC6EE900EBC52E /* LoginVC.swift */,
+				C1306B332003E8FF00EBC52E /* WebViewVC.swift */,
+				C1D6835D20041F5400C092D7 /* RaidTimeSetVC.swift */,
+				C1D6835F20042EFD00C092D7 /* RaidListVC.swift */,
+				C1D6836120042F6800C092D7 /* RaidListCell.swift */,
 				C1306B061FFC6EE900EBC52E /* Main.storyboard */,
 				C1306B0C1FFC6EE900EBC52E /* Assets.xcassets */,
 				C1306B0E1FFC6EE900EBC52E /* LaunchScreen.storyboard */,
@@ -262,8 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1D6835E20041F5400C092D7 /* RaidTimeSetVC.swift in Sources */,
+				C1306B342003E8FF00EBC52E /* WebViewVC.swift in Sources */,
+				C1D6836220042F6800C092D7 /* RaidListCell.swift in Sources */,
 				C1306B0B1FFC6EE900EBC52E /* RaidTime.xcdatamodeld in Sources */,
 				C1306B051FFC6EE900EBC52E /* LoginVC.swift in Sources */,
+				C1D6836020042EFD00C092D7 /* RaidListVC.swift in Sources */,
 				C1306B031FFC6EE900EBC52E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
