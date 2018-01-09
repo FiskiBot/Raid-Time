@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="3300.0000000000005" y="129.61956521739131"/>
         </scene>
-        <!--View Controller-->
+        <!--Raid ListVC-->
         <scene sceneID="l2E-WI-5sz">
             <objects>
-                <viewController id="9eT-iV-4I2" sceneMemberID="viewController">
+                <viewController id="9eT-iV-4I2" customClass="RaidListVC" customModule="RaidTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NsZ-kh-zQ1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,6 +139,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9eT-iV-4I2" id="Sh2-66-wbW"/>
+                                    <outlet property="delegate" destination="9eT-iV-4I2" id="gfY-ms-FSX"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raids Set" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UST-yd-Vuv">
                                 <rect key="frame" x="171" y="84" width="72.333333333333314" height="21"/>
@@ -165,6 +169,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="9gk-Hj-ADi" id="pbB-LS-7LB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0wY-ag-nzV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

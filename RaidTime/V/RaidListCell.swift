@@ -14,6 +14,7 @@ class RaidListCell: UITableViewCell {
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var activityLbl: UILabel!
     @IBOutlet weak var dateTime: UILabel!
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
