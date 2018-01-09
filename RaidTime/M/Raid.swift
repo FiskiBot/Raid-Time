@@ -11,10 +11,10 @@ import Foundation
 class Raid : NSObject {
     
     var activity : String = ""
-    var time : Date = Date()
-    var title : String?
+    var time : String
+    var title : String
     
-    init(activity: String, time: Date, title: String?) {
+    init(activity: String, time: String, title: String) {
         self.activity = activity
         self.time = time
         self.title = title

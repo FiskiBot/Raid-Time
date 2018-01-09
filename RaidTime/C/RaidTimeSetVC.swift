@@ -22,6 +22,13 @@ class RaidTimeSetVC: UIViewController {
     }
 
     @IBAction func setRaidReminder(_ sender: Any) {
+        var selectedActivity = activities[activityPicker.selectedRow(inComponent: 0)]
+        
+        var dateFormatted = DateFormatter.localizedString(from: dateTimePicker.date, dateStyle: .medium, timeStyle: .medium)
+        var postRaid = Raid(activity: selectedActivity, time: dateFormatted, title: activityTitle.text!)
+        
+        DataService.ds.addRaid(raid: postRaid)
+        dismiss(animated: true, completion: nil)
         
     }
 }

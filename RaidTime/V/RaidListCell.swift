@@ -20,5 +20,12 @@ class RaidListCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func configureCell (raid: Raid) {
+        titleLbl.text = raid.title
+        activityLbl.text = raid.activity
+        dateTime.text = raid.time
+    }
+    
 
 }

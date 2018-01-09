@@ -18,26 +18,41 @@ class RaidListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        DataService.ds.loadRaid()
+        NotificationCenter.default.addObserver(self, selector: #selector(RaidListVC.onRaidsLoaded), name: NSNotification.Name(rawValue: "raidLoaded"), object: nil)
     }
 
+    @objc func onRaidsLoaded () {
+        tableView.reloadData()
+    }
 
 }
 
-
-extension RaidTimeSetVC : UITableViewDelegate {
+extension RaidListVC : UITableViewDelegate {
     
 }
 
-extension RaidTimeSetVC : UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+extension RaidListVC : UITableViewDataSource {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return DataService.ds.loadedRaids.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let raid = DataService.ds.loadedRaids[indexPath.row]
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "RaidCell") as? RaidListCell {
+            cell.configureCell(raid: raid)
+            return cell
+        } else {
+            print("FCUK")
+            let cell = RaidListCell()
+            cell.configureCell(raid: raid)
+            return cell
+           
+        }
     }
     
     
