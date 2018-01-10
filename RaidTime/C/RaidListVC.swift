@@ -35,13 +35,12 @@ extension RaidListVC : UITableViewDelegate {
 
 
 extension RaidListVC : UITableViewDataSource {
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+    @objc func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataService.ds.loadedRaids.count
     }
     
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    @objc func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let raid = DataService.ds.loadedRaids[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "RaidCell") as? RaidListCell {
             cell.configureCell(raid: raid)
@@ -51,7 +50,6 @@ extension RaidListVC : UITableViewDataSource {
             let cell = RaidListCell()
             cell.configureCell(raid: raid)
             return cell
-           
         }
     }
     

@@ -10,7 +10,7 @@ import UIKit
 
 class RaidTimeSetVC: UIViewController {
 
-    let activities = ["Leviathan Raid", "Eater Of Worlds", "Nightfall Strike"]
+    let activities = ["Leviathan Raid", "Eater Of Worlds", "Nightfall Strike", "Trial of the Nine"]
     @IBOutlet weak var activityPicker: UIPickerView!
     @IBOutlet weak var dateTimePicker: UIDatePicker!
     @IBOutlet weak var activityTitle: UITextField!
@@ -20,15 +20,18 @@ class RaidTimeSetVC: UIViewController {
         super.viewDidLoad()
         
     }
-
+    
+    
     @IBAction func setRaidReminder(_ sender: Any) {
+        
+        
         var selectedActivity = activities[activityPicker.selectedRow(inComponent: 0)]
-        
         var dateFormatted = DateFormatter.localizedString(from: dateTimePicker.date, dateStyle: .medium, timeStyle: .medium)
-        var postRaid = Raid(activity: selectedActivity, time: dateFormatted, title: activityTitle.text!)
         
-        DataService.ds.addRaid(raid: postRaid)
-        dismiss(animated: true, completion: nil)
+        var newRaid = Raid(activity: selectedActivity, time: dateFormatted, title: activityTitle.text!)
+        
+        DataService.ds.addRaid(raid: newRaid)
+        _ = navigationController?.popViewController(animated: true)
         
     }
 }

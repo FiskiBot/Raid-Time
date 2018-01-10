@@ -20,8 +20,10 @@ class DataService {
     }
     
     func saveRaid() {
+        
         let raidData = NSKeyedArchiver.archivedData(withRootObject: _loadedRaids)
         UserDefaults.standard.set(raidData, forKey: RAID_KEY)
+        UserDefaults.standard.synchronize()
     }
     
     func loadRaid(){
@@ -37,5 +39,6 @@ class DataService {
         _loadedRaids.append(raid)
         saveRaid()
         loadRaid()
+        
     }
 }

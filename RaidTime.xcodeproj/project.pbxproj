@@ -18,6 +18,7 @@
 		C1306B342003E8FF00EBC52E /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1306B332003E8FF00EBC52E /* WebViewVC.swift */; };
 		C1449DFB20043C8900C409B5 /* Raid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1449DFA20043C8900C409B5 /* Raid.swift */; };
 		C1449E00200441FB00C409B5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1449DFF200441FB00C409B5 /* DataService.swift */; };
+		C1449E0220058D7F00C409B5 /* RaidListNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1449E0120058D7F00C409B5 /* RaidListNav.swift */; };
 		C1D6835E20041F5400C092D7 /* RaidTimeSetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6835D20041F5400C092D7 /* RaidTimeSetVC.swift */; };
 		C1D6836020042EFD00C092D7 /* RaidListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6835F20042EFD00C092D7 /* RaidListVC.swift */; };
 		C1D6836220042F6800C092D7 /* RaidListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6836120042F6800C092D7 /* RaidListCell.swift */; };
@@ -58,6 +59,7 @@
 		C1306B332003E8FF00EBC52E /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
 		C1449DFA20043C8900C409B5 /* Raid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Raid.swift; sourceTree = "<group>"; };
 		C1449DFF200441FB00C409B5 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		C1449E0120058D7F00C409B5 /* RaidListNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaidListNav.swift; sourceTree = "<group>"; };
 		C1D6835D20041F5400C092D7 /* RaidTimeSetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaidTimeSetVC.swift; sourceTree = "<group>"; };
 		C1D6835F20042EFD00C092D7 /* RaidListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaidListVC.swift; sourceTree = "<group>"; };
 		C1D6836120042F6800C092D7 /* RaidListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaidListCell.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				C1D6836120042F6800C092D7 /* RaidListCell.swift */,
+				C1449E0120058D7F00C409B5 /* RaidListNav.swift */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				C1449DFB20043C8900C409B5 /* Raid.swift in Sources */,
 				C1D6836020042EFD00C092D7 /* RaidListVC.swift in Sources */,
 				C1306B031FFC6EE900EBC52E /* AppDelegate.swift in Sources */,
+				C1449E0220058D7F00C409B5 /* RaidListNav.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

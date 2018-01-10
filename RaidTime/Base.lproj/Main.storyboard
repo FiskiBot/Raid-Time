@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9eT-iV-4I2">
-    <device id="retina5_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wKc-Y5-VLr">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,50 +15,57 @@
             <objects>
                 <viewController id="Y4J-HP-bQb" customClass="RaidTimeSetVC" customModule="RaidTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hYP-QA-nM3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esr-nz-afB">
-                                <rect key="frame" x="16" y="686" width="30" height="30"/>
+                                <rect key="frame" x="16" y="617" width="30" height="30"/>
                                 <state key="normal" title="Set"/>
                                 <connections>
                                     <action selector="setRaidReminder:" destination="Y4J-HP-bQb" eventType="touchUpInside" id="QWN-u1-eYI"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="wPg-jI-uhZ">
-                                <rect key="frame" x="16" y="360" width="382" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="537140803.76594698">
-                                    <!--2018-01-08 21:46:43 +0000-->
-                                </date>
-                            </datePicker>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a title for the activity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Apm-Bs-4Uj">
-                                <rect key="frame" x="20" y="596" width="378" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zrm-gO-I9Z">
-                                <rect key="frame" x="16" y="84" width="382" height="216"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="Y4J-HP-bQb" id="wZM-BK-2k4"/>
-                                    <outlet property="delegate" destination="Y4J-HP-bQb" id="9Ei-GS-Rqv"/>
-                                </connections>
-                            </pickerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZaN-ff-fGd">
+                                <rect key="frame" x="8" y="94" width="359" height="290"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a title for the activity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Apm-Bs-4Uj">
+                                        <rect key="frame" x="19.5" y="0.0" width="320" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zrm-gO-I9Z">
+                                        <rect key="frame" x="19.5" y="40" width="320" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="gWn-ZP-5lU"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Y4J-HP-bQb" id="wZM-BK-2k4"/>
+                                            <outlet property="delegate" destination="Y4J-HP-bQb" id="9Ei-GS-Rqv"/>
+                                        </connections>
+                                    </pickerView>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="wPg-jI-uhZ">
+                                        <rect key="frame" x="19.5" y="170" width="320" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="BSU-By-lAR"/>
+                                        </constraints>
+                                        <date key="date" timeIntervalSinceReferenceDate="537140803.76594698">
+                                            <!--2018-01-08 21:46:43 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Apm-Bs-4Uj" firstAttribute="width" secondItem="Zrm-gO-I9Z" secondAttribute="width" id="T4y-KV-iY3"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Apm-Bs-4Uj" firstAttribute="top" secondItem="wPg-jI-uhZ" secondAttribute="bottom" constant="20" id="2E3-jl-NDx"/>
-                            <constraint firstItem="Esr-nz-afB" firstAttribute="top" secondItem="Apm-Bs-4Uj" secondAttribute="bottom" constant="60" id="6mQ-d1-JgY"/>
-                            <constraint firstItem="HIm-aY-Evb" firstAttribute="trailing" secondItem="Zrm-gO-I9Z" secondAttribute="trailing" constant="16" id="7tB-TN-I6k"/>
-                            <constraint firstItem="Esr-nz-afB" firstAttribute="leading" secondItem="HIm-aY-Evb" secondAttribute="leading" constant="16" id="80q-bW-g4T"/>
-                            <constraint firstItem="HIm-aY-Evb" firstAttribute="bottom" secondItem="Esr-nz-afB" secondAttribute="bottom" constant="20" id="Wmt-c3-6ia"/>
-                            <constraint firstItem="wPg-jI-uhZ" firstAttribute="leading" secondItem="HIm-aY-Evb" secondAttribute="leading" constant="16" id="ad2-Et-tDY"/>
-                            <constraint firstItem="Apm-Bs-4Uj" firstAttribute="trailing" secondItem="wPg-jI-uhZ" secondAttribute="trailing" id="bQ6-P4-Tv6"/>
-                            <constraint firstItem="Zrm-gO-I9Z" firstAttribute="leading" secondItem="HIm-aY-Evb" secondAttribute="leading" constant="16" id="d0b-Uz-bXY"/>
-                            <constraint firstItem="Apm-Bs-4Uj" firstAttribute="leading" secondItem="hYP-QA-nM3" secondAttribute="leadingMargin" id="k5C-3M-tq4"/>
-                            <constraint firstItem="wPg-jI-uhZ" firstAttribute="top" secondItem="Zrm-gO-I9Z" secondAttribute="bottom" constant="60" id="kMD-0w-l8J"/>
-                            <constraint firstItem="Zrm-gO-I9Z" firstAttribute="top" secondItem="HIm-aY-Evb" secondAttribute="top" constant="20" id="phU-QO-BzL"/>
-                            <constraint firstItem="HIm-aY-Evb" firstAttribute="trailing" secondItem="wPg-jI-uhZ" secondAttribute="trailing" constant="16" id="wl0-HB-QC2"/>
+                            <constraint firstItem="ZaN-ff-fGd" firstAttribute="leading" secondItem="HIm-aY-Evb" secondAttribute="leading" constant="8" id="6Kd-nr-oYx"/>
+                            <constraint firstItem="HIm-aY-Evb" firstAttribute="bottom" secondItem="Esr-nz-afB" secondAttribute="bottom" constant="20" id="ITm-cV-pAC"/>
+                            <constraint firstItem="ZaN-ff-fGd" firstAttribute="top" secondItem="HIm-aY-Evb" secondAttribute="top" constant="30" id="XbI-8a-Wnq"/>
+                            <constraint firstItem="HIm-aY-Evb" firstAttribute="trailing" secondItem="ZaN-ff-fGd" secondAttribute="trailing" constant="8" id="sjV-3M-Y7A"/>
+                            <constraint firstItem="Esr-nz-afB" firstAttribute="leading" secondItem="HIm-aY-Evb" secondAttribute="leading" constant="16" id="yBT-rh-RgY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HIm-aY-Evb"/>
                     </view>
@@ -78,64 +84,57 @@
             <objects>
                 <viewController id="9eT-iV-4I2" customClass="RaidListVC" customModule="RaidTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NsZ-kh-zQ1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9gk-Hj-ADi">
-                                <rect key="frame" x="20" y="135" width="374" height="330"/>
+                                <rect key="frame" x="20" y="135" width="335" height="330"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="330" id="swc-fj-QMt"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RaidCell" rowHeight="115" id="QQB-ee-how" customClass="RaidListCell" customModule="RaidTime" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="115"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RaidCell" rowHeight="121" id="QQB-ee-how" customClass="RaidListCell" customModule="RaidTime" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QQB-ee-how" id="buE-IL-UT6">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="114.66666666666667"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="120.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRz-MP-Z3W">
-                                                    <rect key="frame" x="23" y="11" width="336" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDp-qM-cWa">
-                                                    <rect key="frame" x="23" y="47" width="200" height="60"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="WLL-07-E4Q"/>
-                                                        <constraint firstAttribute="width" constant="200" id="jDv-2e-Epl"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date And Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBu-xV-uPh">
-                                                    <rect key="frame" x="231" y="46" width="120" height="60"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="6r5-Ss-KgD"/>
-                                                        <constraint firstAttribute="width" constant="120" id="EbS-EK-jj5"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="thK-x3-c5C">
+                                                    <rect key="frame" x="4" y="4" width="113.5" height="113"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRz-MP-Z3W">
+                                                            <rect key="frame" x="0.0" y="0.0" width="33.5" height="52"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDp-qM-cWa">
+                                                            <rect key="frame" x="0.0" y="62" width="57" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date And Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBu-xV-uPh">
+                                                            <rect key="frame" x="0.0" y="92.5" width="113.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="sBu-xV-uPh" secondAttribute="trailing" constant="8" id="5oy-Tq-9Hl"/>
-                                                <constraint firstItem="hDp-qM-cWa" firstAttribute="top" secondItem="PRz-MP-Z3W" secondAttribute="bottom" constant="15" id="LJT-yw-Xbi"/>
-                                                <constraint firstItem="PRz-MP-Z3W" firstAttribute="leading" secondItem="buE-IL-UT6" secondAttribute="leadingMargin" constant="8" id="Leh-dr-NmO"/>
-                                                <constraint firstItem="hDp-qM-cWa" firstAttribute="leading" secondItem="buE-IL-UT6" secondAttribute="leadingMargin" constant="8" id="PcH-87-tMd"/>
-                                                <constraint firstItem="PRz-MP-Z3W" firstAttribute="trailing" secondItem="buE-IL-UT6" secondAttribute="trailingMargin" id="RXh-H8-LcQ"/>
-                                                <constraint firstItem="sBu-xV-uPh" firstAttribute="top" secondItem="PRz-MP-Z3W" secondAttribute="bottom" constant="14" id="rg5-gr-4TX"/>
-                                                <constraint firstItem="PRz-MP-Z3W" firstAttribute="top" secondItem="buE-IL-UT6" secondAttribute="topMargin" id="vnL-PY-Our"/>
+                                                <constraint firstItem="thK-x3-c5C" firstAttribute="centerY" secondItem="buE-IL-UT6" secondAttribute="centerY" id="cKf-fc-ZUL"/>
+                                                <constraint firstItem="thK-x3-c5C" firstAttribute="top" secondItem="buE-IL-UT6" secondAttribute="top" constant="4" id="fnG-dq-361"/>
+                                                <constraint firstItem="thK-x3-c5C" firstAttribute="leading" secondItem="buE-IL-UT6" secondAttribute="leading" constant="4" id="lvj-wv-hh4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="activityLbl" destination="hDp-qM-cWa" id="IOw-Eb-pBY"/>
-                                            <outlet property="dateTime" destination="sBu-xV-uPh" id="69U-cY-LmS"/>
-                                            <outlet property="titleLbl" destination="PRz-MP-Z3W" id="4IL-No-tWl"/>
+                                            <outlet property="activityLbl" destination="hDp-qM-cWa" id="l9y-pO-dm6"/>
+                                            <outlet property="dateTime" destination="sBu-xV-uPh" id="YdC-KC-0oo"/>
+                                            <outlet property="titleLbl" destination="PRz-MP-Z3W" id="N0g-Cw-akp"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -145,7 +144,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raids Set" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UST-yd-Vuv">
-                                <rect key="frame" x="171" y="84" width="72.333333333333314" height="21"/>
+                                <rect key="frame" x="151.5" y="84" width="72" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -165,7 +164,7 @@
                     <navigationItem key="navigationItem" id="LHp-n7-z6x">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="MTx-Ri-atn">
                             <connections>
-                                <segue destination="Y4J-HP-bQb" kind="show" id="YZ0-iz-omO"/>
+                                <segue destination="Y4J-HP-bQb" kind="show" identifier="BackToRaidList" id="YZ0-iz-omO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -182,11 +181,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="RaidTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ek-iQ-Xhv">
-                                <rect key="frame" x="167" y="353" width="80" height="30"/>
+                                <rect key="frame" x="147.5" y="318.5" width="80" height="30"/>
                                 <state key="normal" title="Get Raiding"/>
                                 <connections>
                                     <action selector="authorize:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2zc-IB-wwm"/>
@@ -210,7 +209,7 @@
             <objects>
                 <viewController id="oVv-eA-HpE" customClass="WebViewVC" customModule="RaidTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IdH-TN-EPb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="acB-6u-zMr"/>
@@ -220,13 +219,13 @@
             </objects>
             <point key="canvasLocation" x="874" y="130"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Raid List Nav-->
         <scene sceneID="0rM-In-ndu">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wKc-Y5-VLr" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wKc-Y5-VLr" customClass="RaidListNav" customModule="RaidTime" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LS9-Ik-5kC">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
