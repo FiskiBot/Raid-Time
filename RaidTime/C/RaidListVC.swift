@@ -13,9 +13,7 @@ class RaidListVC: UIViewController {
     
 
     @IBOutlet weak var tableView: UITableView!
-    
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,8 +36,7 @@ extension RaidListVC : UITableViewDataSource {
     @objc func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataService.ds.loadedRaids.count
     }
-    
-    
+
     @objc func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let raid = DataService.ds.loadedRaids[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "RaidCell") as? RaidListCell {
@@ -52,6 +49,5 @@ extension RaidListVC : UITableViewDataSource {
             return cell
         }
     }
-    
-    
+
 }
