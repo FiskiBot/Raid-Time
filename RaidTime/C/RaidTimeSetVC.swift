@@ -9,17 +9,26 @@
 import UIKit
 import UserNotifications
 
-class RaidTimeSetVC: UIViewController {
+class RaidTimeSetVC: UIViewController, UITextFieldDelegate {
     let UNCenter = UNUserNotificationCenter.current()
     let activities = ["Leviathan Raid", "Eater Of Worlds", "Nightfall Strike", "Trial of the Nine"]
     @IBOutlet weak var activityPicker: UIPickerView!
     @IBOutlet weak var dateTimePicker: UIDatePicker!
     @IBOutlet weak var activityTitle: UITextField!
     
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerForNotifications()
         
+        registerForNotifications()
+        activityTitle.delegate = self
     }
     func registerForNotifications() {
         UNCenter.getNotificationSettings { (settings) in
@@ -42,7 +51,9 @@ class RaidTimeSetVC: UIViewController {
     
     func setNotification() {
         var selectedActivity = activities[activityPicker.selectedRow(inComponent: 0)]
-
+        
+        let codeGen = UUID().uuidString
+        print(codeGen)
         let notificationContent = UNMutableNotificationContent()
         //TODO: Change this to allow a check in on the back end.
         let checkIn = UNNotificationAction(identifier: "Checkin", title: "Check In", options: [.destructive])
@@ -60,7 +71,7 @@ class RaidTimeSetVC: UIViewController {
         let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: interval, repeats: false)
         
         let category = UNNotificationCategory(identifier: "Reminder", actions: [checkIn], intentIdentifiers: [], options: [])
-        let request = UNNotificationRequest(identifier: "RaidNotification", content: notificationContent, trigger: notificationTrigger)
+        let request = UNNotificationRequest(identifier: "RaidNotification\(codeGen)", content: notificationContent, trigger: notificationTrigger)
         UNCenter.setNotificationCategories([category])
         //TODO: Add a completion handler that connects back to the backend.
         UNCenter.add(request, withCompletionHandler: nil)
@@ -87,6 +98,8 @@ extension RaidTimeSetVC : UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return activities[row]
     }
+    
+    
 }
 
 extension RaidTimeSetVC : UIPickerViewDataSource {

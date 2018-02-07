@@ -19,6 +19,9 @@
 		C1449DFB20043C8900C409B5 /* Raid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1449DFA20043C8900C409B5 /* Raid.swift */; };
 		C1449E00200441FB00C409B5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1449DFF200441FB00C409B5 /* DataService.swift */; };
 		C1449E0220058D7F00C409B5 /* RaidListNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1449E0120058D7F00C409B5 /* RaidListNav.swift */; };
+		C1449E052007EBC700C409B5 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1449E042007EBC700C409B5 /* AuthenticationView.swift */; };
+		C1449E072007EC5100C409B5 /* TokenCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1449E062007EC5100C409B5 /* TokenCache.swift */; };
+		C1449E092007ED2000C409B5 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1449E082007ED2000C409B5 /* DetailsVC.swift */; };
 		C1D6835E20041F5400C092D7 /* RaidTimeSetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6835D20041F5400C092D7 /* RaidTimeSetVC.swift */; };
 		C1D6836020042EFD00C092D7 /* RaidListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6835F20042EFD00C092D7 /* RaidListVC.swift */; };
 		C1D6836220042F6800C092D7 /* RaidListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6836120042F6800C092D7 /* RaidListCell.swift */; };
@@ -60,6 +63,9 @@
 		C1449DFA20043C8900C409B5 /* Raid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Raid.swift; sourceTree = "<group>"; };
 		C1449DFF200441FB00C409B5 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		C1449E0120058D7F00C409B5 /* RaidListNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaidListNav.swift; sourceTree = "<group>"; };
+		C1449E042007EBC700C409B5 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		C1449E062007EC5100C409B5 /* TokenCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenCache.swift; sourceTree = "<group>"; };
+		C1449E082007ED2000C409B5 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		C1D6835D20041F5400C092D7 /* RaidTimeSetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaidTimeSetVC.swift; sourceTree = "<group>"; };
 		C1D6835F20042EFD00C092D7 /* RaidListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaidListVC.swift; sourceTree = "<group>"; };
 		C1D6836120042F6800C092D7 /* RaidListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaidListCell.swift; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 			children = (
 				C1306B021FFC6EE900EBC52E /* AppDelegate.swift */,
 				C1449DFF200441FB00C409B5 /* DataService.swift */,
+				C1449E032007EB6A00C409B5 /* OAuth */,
 				C1449DFD200441C200C409B5 /* M */,
 				C1449DFE200441D300C409B5 /* V */,
 				C1449DFC2004419E00C409B5 /* C */,
@@ -148,9 +155,8 @@
 		C1449DFC2004419E00C409B5 /* C */ = {
 			isa = PBXGroup;
 			children = (
-				C1D6835F20042EFD00C092D7 /* RaidListVC.swift */,
 				C1306B041FFC6EE900EBC52E /* LoginVC.swift */,
-				C1306B332003E8FF00EBC52E /* WebViewVC.swift */,
+				C1D6835F20042EFD00C092D7 /* RaidListVC.swift */,
 				C1D6835D20041F5400C092D7 /* RaidTimeSetVC.swift */,
 			);
 			path = C;
@@ -171,6 +177,17 @@
 				C1449E0120058D7F00C409B5 /* RaidListNav.swift */,
 			);
 			path = V;
+			sourceTree = "<group>";
+		};
+		C1449E032007EB6A00C409B5 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				C1306B332003E8FF00EBC52E /* WebViewVC.swift */,
+				C1449E042007EBC700C409B5 /* AuthenticationView.swift */,
+				C1449E062007EC5100C409B5 /* TokenCache.swift */,
+				C1449E082007ED2000C409B5 /* DetailsVC.swift */,
+			);
+			path = OAuth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1449E072007EC5100C409B5 /* TokenCache.swift in Sources */,
 				C1449E00200441FB00C409B5 /* DataService.swift in Sources */,
 				C1D6835E20041F5400C092D7 /* RaidTimeSetVC.swift in Sources */,
 				C1306B342003E8FF00EBC52E /* WebViewVC.swift in Sources */,
@@ -314,8 +332,10 @@
 				C1306B0B1FFC6EE900EBC52E /* RaidTime.xcdatamodeld in Sources */,
 				C1306B051FFC6EE900EBC52E /* LoginVC.swift in Sources */,
 				C1449DFB20043C8900C409B5 /* Raid.swift in Sources */,
+				C1449E052007EBC700C409B5 /* AuthenticationView.swift in Sources */,
 				C1D6836020042EFD00C092D7 /* RaidListVC.swift in Sources */,
 				C1306B031FFC6EE900EBC52E /* AppDelegate.swift in Sources */,
+				C1449E092007ED2000C409B5 /* DetailsVC.swift in Sources */,
 				C1449E0220058D7F00C409B5 /* RaidListNav.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wKc-Y5-VLr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -94,7 +94,7 @@
                                     <constraint firstAttribute="height" constant="330" id="swc-fj-QMt"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RaidCell" rowHeight="121" id="QQB-ee-how" customClass="RaidListCell" customModule="RaidTime" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RaidCell" rowHeight="121" id="QQB-ee-how" customClass="RaidListCell" customModule="RaidTime" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="335" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QQB-ee-how" id="buE-IL-UT6">
@@ -191,10 +191,31 @@
                                     <action selector="authorize:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2zc-IB-wwm"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eFv-sa-wMO">
+                                <rect key="frame" x="0.0" y="516.5" width="375" height="50.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Membership ID#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imo-sn-kNN">
+                                        <rect key="frame" x="124.5" y="0.0" width="126.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaf-c5-O3u">
+                                        <rect key="frame" x="93.5" y="20.5" width="188" height="30"/>
+                                        <state key="normal" title="Get Destiny Membership ID"/>
+                                        <connections>
+                                            <action selector="getMembershipID:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qXw-eW-Ioe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eFv-sa-wMO" secondAttribute="bottom" constant="100" id="A2u-g6-GmM"/>
                             <constraint firstItem="2ek-iQ-Xhv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FPb-wk-0cM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eFv-sa-wMO" secondAttribute="trailing" id="L6W-7D-7Vo"/>
+                            <constraint firstItem="eFv-sa-wMO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RV7-7c-xdE"/>
                             <constraint firstItem="2ek-iQ-Xhv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TQz-og-5eK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -202,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.75" y="129.92957746478874"/>
+            <point key="canvasLocation" x="-98.400000000000006" y="129.98500749625188"/>
         </scene>
         <!--Web ViewVC-->
         <scene sceneID="RpG-n0-05a">

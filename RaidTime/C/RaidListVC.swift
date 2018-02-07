@@ -9,8 +9,6 @@
 import UIKit
 
 class RaidListVC: UIViewController {
-    
-    
 
     @IBOutlet weak var tableView: UITableView!
         
@@ -33,11 +31,14 @@ extension RaidListVC : UITableViewDelegate {
 
 
 extension RaidListVC : UITableViewDataSource {
+    
     @objc func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataService.ds.loadedRaids.count
     }
 
     @objc func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
         let raid = DataService.ds.loadedRaids[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "RaidCell") as? RaidListCell {
             cell.configureCell(raid: raid)
@@ -49,5 +50,12 @@ extension RaidListVC : UITableViewDataSource {
             return cell
         }
     }
-
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            
+            DataService.ds.deleteRaid(index: indexPath.row)
+            
+        }
+    }
 }

@@ -13,7 +13,7 @@ import UIKit
 import WebKit
 import Foundation
 
-/*
+
 class WebViewVC: UIViewController, UIWebViewDelegate, WKNavigationDelegate {
     private struct Constants {
         static let applicationHeaderKey = "X-API-Key"
@@ -23,10 +23,10 @@ class WebViewVC: UIViewController, UIWebViewDelegate, WKNavigationDelegate {
         // contain a secret. If it's missing create a new one.
         //
         // Finally make sure the OAuth Client Type is set to confidencial.
-        static let applicationAPIKey = ""                         // <<< SETUP REQUIRED
-        static let authenticationCodeURL = URL(string: "")!     // <<< SETUP REQUIRED
-        static let clientId = ""                                 // <<< SETUP REQUIRED
-        static let clientSecret = ""                             // <<< SETUP REQUIRED
+        static let applicationAPIKey = "7f00e0511de5415d9e07196acb4d048b"                         // <<< SETUP REQUIRED
+        static let clientId = "13732"                                 // <<< SETUP REQUIRED
+        static let clientSecret = "pM.pwNtJIBp5q-vrIjMoiL8DaMZflMvSMZQOr0SmZ.0"
+        static let authenticationCodeURL = URL(string: "https://www.bungie.net/en/OAuth/Authorize")!    // <<< SETUP REQUIRED
         // URLs
         static let authenticationURL = URL(string: "https://www.bungie.net/en/OAuth/Authorize?client_id=\(clientId)&response_type=code")!
         static let oauthTokenURL = URL(string: "https://www.bungie.net/Platform/App/OAuth/Token/")!
@@ -147,4 +147,4 @@ class WebViewVC: UIViewController, UIWebViewDelegate, WKNavigationDelegate {
         return nil
     }
 }
-*/
+
