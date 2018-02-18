@@ -13,8 +13,9 @@ struct User : Codable {
 }
 
 struct Response : Codable {
-    let bungieNetUser : BungieUser
-    let destinyMemberships : [DestinyMembership]
+    let bungieNetUser : BungieUser?
+    let destinyMemberships : [DestinyMembership]?
+    let results : [Clan]?
 }
 
 struct BungieUser : Codable {
@@ -22,7 +23,6 @@ struct BungieUser : Codable {
     let displayName : String
     let profilePicture : Int
     let profilePicturePath : String
-    
 }
 
 struct DestinyMembership : Codable {
@@ -32,6 +32,22 @@ struct DestinyMembership : Codable {
     let membershipType : Int
 }
 
+struct Clan : Codable {
+    let member : ClanMember
+    let group : ClanInfoBasic
+}
+
+struct ClanInfoBasic : Codable {
+   let name : String
+}
+
+struct ClanMember : Codable {
+    let memberType : Int
+    let isOnline : Bool
+    let groupId : String
+    let destinyUserInfo : DestinyMembership
+ 
+}
 
 class DataService : Codable{
     static let ds = DataService()
@@ -39,6 +55,7 @@ class DataService : Codable{
     var expiresIn: Int = 0
     var refreshToken: String?
     var refreshExpiresIn: Int = 0
+    
     
     var tokenType: String = "Unknown"
     var membershipId: String = "Unknown"
@@ -49,6 +66,10 @@ class DataService : Codable{
     var destinyDisplayName : String = "Destiny Display Name Unknown"
     var membershipType : Int = 0
     var iconPath : String = "Unknown Icon Path"
+    
+    //Clan info
+    var clanID : String = "Destiny Clan Unknown"
+    var clanName : String = "Clan Name Unknown"
     
     //MARK: Auth and API Network Calls
     func populateWith(_ json: [String:Any]?) {
@@ -91,15 +112,11 @@ class DataService : Codable{
         }
     }
     
-    
-    
     //MARK: Table View
     let RAID_KEY = "raidKey"
     
     private var _loadedRaids = [Raid]()
-    
-    
-    
+
     var loadedRaids : [Raid] {
         return _loadedRaids
     }

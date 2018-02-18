@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,27 +15,27 @@
             <objects>
                 <viewController id="Y4J-HP-bQb" customClass="RaidTimeSetVC" customModule="RaidTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hYP-QA-nM3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esr-nz-afB">
-                                <rect key="frame" x="16" y="617" width="30" height="30"/>
+                                <rect key="frame" x="16" y="518" width="30" height="30"/>
                                 <state key="normal" title="Set"/>
                                 <connections>
                                     <action selector="setRaidReminder:" destination="Y4J-HP-bQb" eventType="touchUpInside" id="QWN-u1-eYI"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZaN-ff-fGd">
-                                <rect key="frame" x="8" y="94" width="359" height="290"/>
+                                <rect key="frame" x="8" y="94" width="304" height="290"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a title for the activity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Apm-Bs-4Uj">
-                                        <rect key="frame" x="19.5" y="0.0" width="320" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zrm-gO-I9Z">
-                                        <rect key="frame" x="19.5" y="40" width="320" height="120"/>
+                                        <rect key="frame" x="0.0" y="40" width="304" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="gWn-ZP-5lU"/>
                                         </constraints>
@@ -45,7 +45,7 @@
                                         </connections>
                                     </pickerView>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="wPg-jI-uhZ">
-                                        <rect key="frame" x="19.5" y="170" width="320" height="120"/>
+                                        <rect key="frame" x="0.0" y="170" width="304" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="BSU-By-lAR"/>
                                         </constraints>
@@ -84,21 +84,21 @@
             <objects>
                 <viewController id="9eT-iV-4I2" customClass="RaidListVC" customModule="RaidTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NsZ-kh-zQ1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9gk-Hj-ADi">
-                                <rect key="frame" x="20" y="135" width="335" height="330"/>
+                                <rect key="frame" x="20" y="135" width="280" height="330"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="330" id="swc-fj-QMt"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RaidCell" rowHeight="121" id="QQB-ee-how" customClass="RaidListCell" customModule="RaidTime" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="335" height="121"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RaidCell" rowHeight="121" id="QQB-ee-how" customClass="RaidListCell" customModule="RaidTime" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="280" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QQB-ee-how" id="buE-IL-UT6">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="120.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="120.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="thK-x3-c5C">
@@ -144,7 +144,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raids Set" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UST-yd-Vuv">
-                                <rect key="frame" x="151.5" y="84" width="72" height="21"/>
+                                <rect key="frame" x="124" y="84" width="72" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -181,27 +181,27 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="RaidTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ek-iQ-Xhv">
-                                <rect key="frame" x="147.5" y="318.5" width="80" height="30"/>
+                                <rect key="frame" x="120" y="30" width="80" height="30"/>
                                 <state key="normal" title="Get Raiding"/>
                                 <connections>
                                     <action selector="authorize:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2zc-IB-wwm"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eFv-sa-wMO">
-                                <rect key="frame" x="0.0" y="516.5" width="375" height="50.5"/>
+                                <rect key="frame" x="0.0" y="110" width="320" height="50.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Membership ID#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imo-sn-kNN">
-                                        <rect key="frame" x="124.5" y="0.0" width="126.5" height="20.5"/>
+                                        <rect key="frame" x="97" y="0.0" width="126.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaf-c5-O3u">
-                                        <rect key="frame" x="93.5" y="20.5" width="188" height="30"/>
+                                        <rect key="frame" x="66" y="20.5" width="188" height="30"/>
                                         <state key="normal" title="Get Destiny Membership ID"/>
                                         <connections>
                                             <action selector="getMembershipID:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qXw-eW-Ioe"/>
@@ -209,28 +209,56 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eWE-7E-VoC">
+                                <rect key="frame" x="0.0" y="210.5" width="320" height="50.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ClanID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xo7-Mk-fpF">
+                                        <rect key="frame" x="135" y="0.0" width="50.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIo-or-dzb">
+                                        <rect key="frame" x="132" y="20.5" width="56" height="30"/>
+                                        <state key="normal" title="GetClan"/>
+                                        <connections>
+                                            <action selector="getClanID:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pbE-Iv-hck"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eFv-sa-wMO" secondAttribute="bottom" constant="100" id="A2u-g6-GmM"/>
-                            <constraint firstItem="2ek-iQ-Xhv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FPb-wk-0cM"/>
+                            <constraint firstItem="eFv-sa-wMO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gwc-03-gHm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eFv-sa-wMO" secondAttribute="trailing" id="L6W-7D-7Vo"/>
                             <constraint firstItem="eFv-sa-wMO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RV7-7c-xdE"/>
-                            <constraint firstItem="2ek-iQ-Xhv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TQz-og-5eK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eWE-7E-VoC" secondAttribute="trailing" id="Th7-6H-VMQ"/>
+                            <constraint firstItem="eFv-sa-wMO" firstAttribute="top" secondItem="2ek-iQ-Xhv" secondAttribute="bottom" constant="50" id="YzA-r9-qPQ"/>
+                            <constraint firstItem="eFv-sa-wMO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZZ8-6Y-Xx2"/>
+                            <constraint firstItem="eWE-7E-VoC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c1c-Uy-kHs"/>
+                            <constraint firstItem="2ek-iQ-Xhv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="dhS-uJ-9wd"/>
+                            <constraint firstItem="eWE-7E-VoC" firstAttribute="top" secondItem="eFv-sa-wMO" secondAttribute="bottom" constant="50" id="ocz-f7-dVk"/>
+                            <constraint firstItem="2ek-iQ-Xhv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="p4H-Rx-t8c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2ek-iQ-Xhv" secondAttribute="trailing" constant="120" id="zH4-5J-fPR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="ClanNameLbl" destination="xo7-Mk-fpF" id="sFB-Ge-vCE"/>
+                        <outlet property="memberIdNumberLbl" destination="imo-sn-kNN" id="EBD-JX-egt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-98.400000000000006" y="129.98500749625188"/>
+            <point key="canvasLocation" x="-99.375" y="129.92957746478874"/>
         </scene>
         <!--Web ViewVC-->
         <scene sceneID="RpG-n0-05a">
             <objects>
                 <viewController id="oVv-eA-HpE" customClass="WebViewVC" customModule="RaidTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IdH-TN-EPb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="acB-6u-zMr"/>
@@ -246,7 +274,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wKc-Y5-VLr" customClass="RaidListNav" customModule="RaidTime" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LS9-Ik-5kC">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
