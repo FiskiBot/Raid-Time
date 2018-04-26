@@ -94,7 +94,7 @@
                                     <constraint firstAttribute="height" constant="330" id="swc-fj-QMt"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RaidCell" rowHeight="121" id="QQB-ee-how" customClass="RaidListCell" customModule="RaidTime" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RaidCell" rowHeight="121" id="QQB-ee-how" customClass="RaidListCell" customModule="RaidTime" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="280" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QQB-ee-how" id="buE-IL-UT6">
@@ -227,9 +227,29 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kCu-OC-4Ng">
+                                <rect key="frame" x="0.0" y="281" width="320" height="50.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clan Members" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3P-dA-Tg7">
+                                        <rect key="frame" x="104.5" y="0.0" width="111" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIY-aY-o4i">
+                                        <rect key="frame" x="96" y="20.5" width="128" height="30"/>
+                                        <state key="normal" title="Get Clan Members"/>
+                                        <connections>
+                                            <action selector="getMembersOfClan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rHH-y7-0By"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kCu-OC-4Ng" secondAttribute="trailing" id="6kD-Ze-XIO"/>
+                            <constraint firstItem="kCu-OC-4Ng" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="74l-rQ-Dag"/>
                             <constraint firstItem="eFv-sa-wMO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gwc-03-gHm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eFv-sa-wMO" secondAttribute="trailing" id="L6W-7D-7Vo"/>
                             <constraint firstItem="eFv-sa-wMO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RV7-7c-xdE"/>
@@ -238,6 +258,7 @@
                             <constraint firstItem="eFv-sa-wMO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZZ8-6Y-Xx2"/>
                             <constraint firstItem="eWE-7E-VoC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c1c-Uy-kHs"/>
                             <constraint firstItem="2ek-iQ-Xhv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="dhS-uJ-9wd"/>
+                            <constraint firstItem="kCu-OC-4Ng" firstAttribute="top" secondItem="eWE-7E-VoC" secondAttribute="bottom" constant="20" id="lRL-xD-fA6"/>
                             <constraint firstItem="eWE-7E-VoC" firstAttribute="top" secondItem="eFv-sa-wMO" secondAttribute="bottom" constant="50" id="ocz-f7-dVk"/>
                             <constraint firstItem="2ek-iQ-Xhv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="p4H-Rx-t8c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2ek-iQ-Xhv" secondAttribute="trailing" constant="120" id="zH4-5J-fPR"/>
@@ -246,6 +267,7 @@
                     </view>
                     <connections>
                         <outlet property="ClanNameLbl" destination="xo7-Mk-fpF" id="sFB-Ge-vCE"/>
+                        <outlet property="clanMembersLbl" destination="W3P-dA-Tg7" id="a7a-J6-k02"/>
                         <outlet property="memberIdNumberLbl" destination="imo-sn-kNN" id="EBD-JX-egt"/>
                     </connections>
                 </viewController>
