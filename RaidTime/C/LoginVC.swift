@@ -14,15 +14,11 @@ class LoginVC: UIViewController, SFSafariViewControllerDelegate {
     private struct Constants {
         static let applicationHeaderKey = "X-API-Key"
         
-        // The following values need to be specified for your application that is registered with Bungie. You
-        // can do so here: https://www.bungie.net/en/application. Note that you will need your API key to
-        // contain a secret. If it's missing create a new one.
-        //
-        // Finally make sure the OAuth Client Type is set to confidencial.
-        static let applicationAPIKey = "7f00e0511de5415d9e07196acb4d048b"                         // <<< SETUP REQUIRED
+        
+        static let applicationAPIKey = ""                         // <<< SETUP REQUIRED
         static let authenticationCodeURL = URL(string: "https://www.bungie.net/en/OAuth/Authorize")!     // <<< SETUP REQUIRED
-        static let clientId = "13732"                                 // <<< SETUP REQUIRED
-        static let clientSecret = "pM.pwNtJIBp5q-vrIjMoiL8DaMZflMvSMZQOr0SmZ.0"                             // <<< SETUP REQUIRED
+        static let clientId = ""                                 // <<< SETUP REQUIRED
+        static let clientSecret = ""                             // <<< SETUP REQUIRED
         
         // URLs
         static let authenticationURL = URL(string: "https://www.bungie.net/en/OAuth/Authorize?client_id=\(clientId)&response_type=code")!
